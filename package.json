@@ -1,5 +1,5 @@
 {
-  "name": "Jsldb",
+  "name": "jsldb",
   "version": "1.0.0",
   "description": "Javascript API for cross-browser/device persistence layer. It implements a double compression algorithm (JSONC & GZIP) to reduce up to 80% data size, that is stored through PersistJS for storage engine fallbacks.",
   "main": "dist/Jsldb.js",
