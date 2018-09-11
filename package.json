@@ -1,0 +1,37 @@
+{
+  "name": "Jsldb",
+  "version": "1.0.0",
+  "description": "Javascript API for cross-browser/device persistence layer. It implements a double compression algorithm (JSONC & GZIP) to reduce up to 80% data size, that is stored through PersistJS for storage engine fallbacks.",
+  "main": "dist/Jsldb.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ErickRuano/Jsldb"
+  },
+  "author": "Erick Ruano",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jsdoc3": "^1.0.0",
+    "gulp-minify": "0.0.14",
+    "gulp-rename": "^1.2.2",
+    "gulp-self-execute": "^1.0.3",
+    "gulp-umd": "^2.0.0",
+    "jsoncomp": "^1.6.1",
+    "mocha": "^3.1.2",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "jsoncomp": "^1.6.1",
+    "persist-js": "^0.3.1"
+  }
+}

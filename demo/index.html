@@ -1,0 +1,329 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="../node_modules/persist-js/persist-min.js"></script>
+<script src="../node_modules/jsoncomp/versions/jsonc.min.js"></script>
+<script src="../dist/js-db-min.js"></script>
+<script>
+	var storage = new Jsldb("demo");
+
+	storage.set('number', 1203);
+
+	storage.set('string', 'Hello World');
+
+	storage.set('obj', [
+	  {
+	    "_id": "5812d81901f21b788303e453",
+	    "index": 0,
+	    "guid": "f1fd6101-7ae3-48ec-8865-4b5040faefe7",
+	    "isActive": false,
+	    "balance": "$3,250.07",
+	    "picture": "http://placehold.it/32x32",
+	    "age": 40,
+	    "eyeColor": "green",
+	    "name": "Felicia Deleon",
+	    "gender": "female",
+	    "company": "MAINELAND",
+	    "email": "feliciadeleon@maineland.com",
+	    "phone": "+1 (919) 444-3705",
+	    "address": "753 Vanderbilt Street, Succasunna, Hawaii, 8962",
+	    "about": "Magna velit pariatur labore reprehenderit reprehenderit ut non. Laborum eu proident duis ad. Consequat fugiat elit enim amet. In Lorem dolor nostrud sint do deserunt. Irure nostrud deserunt tempor qui. Cupidatat tempor dolor consequat eiusmod ex est occaecat nisi consectetur nostrud.\r\n",
+	    "registered": "2015-04-10T05:14:14 +06:00",
+	    "latitude": 65.582878,
+	    "longitude": -21.80168,
+	    "tags": [
+	      "tempor",
+	      "irure",
+	      "labore",
+	      "dolor",
+	      "pariatur",
+	      "voluptate",
+	      "fugiat"
+	    ],
+	    "friends": [
+	      {
+	        "id": 0,
+	        "name": "Kristen Blanchard"
+	      },
+	      {
+	        "id": 1,
+	        "name": "Arlene Leach"
+	      },
+	      {
+	        "id": 2,
+	        "name": "Sara Chan"
+	      }
+	    ],
+	    "greeting": "Hello, Felicia Deleon! You have 10 unread messages.",
+	    "favoriteFruit": "banana"
+	  },
+	  {
+	    "_id": "5812d819be0a50e66d841113",
+	    "index": 1,
+	    "guid": "026c4224-3b74-49a0-89b5-ac14f485591f",
+	    "isActive": false,
+	    "balance": "$2,675.92",
+	    "picture": "http://placehold.it/32x32",
+	    "age": 39,
+	    "eyeColor": "green",
+	    "name": "Angelica Landry",
+	    "gender": "female",
+	    "company": "QUORDATE",
+	    "email": "angelicalandry@quordate.com",
+	    "phone": "+1 (909) 476-3494",
+	    "address": "433 Narrows Avenue, Freelandville, New Mexico, 8476",
+	    "about": "Adipisicing reprehenderit enim ipsum aliquip. Ipsum officia nulla sit aute culpa in ullamco exercitation. Mollit consequat minim consequat ex deserunt amet nostrud amet commodo. Labore ex cupidatat occaecat fugiat laboris aute quis deserunt.\r\n",
+	    "registered": "2016-05-13T07:59:18 +06:00",
+	    "latitude": -69.827226,
+	    "longitude": 23.158104,
+	    "tags": [
+	      "aliqua",
+	      "pariatur",
+	      "occaecat",
+	      "pariatur",
+	      "ea",
+	      "dolore",
+	      "dolore"
+	    ],
+	    "friends": [
+	      {
+	        "id": 0,
+	        "name": "Owen Dorsey"
+	      },
+	      {
+	        "id": 1,
+	        "name": "Flynn Conrad"
+	      },
+	      {
+	        "id": 2,
+	        "name": "Kate Burke"
+	      }
+	    ],
+	    "greeting": "Hello, Angelica Landry! You have 1 unread messages.",
+	    "favoriteFruit": "strawberry"
+	  },
+	  {
+	    "_id": "5812d819d90d207483b29659",
+	    "index": 2,
+	    "guid": "d5f4ec15-5d99-4309-b170-ec5259dba426",
+	    "isActive": true,
+	    "balance": "$3,897.88",
+	    "picture": "http://placehold.it/32x32",
+	    "age": 32,
+	    "eyeColor": "blue",
+	    "name": "Odessa Frank",
+	    "gender": "female",
+	    "company": "VITRICOMP",
+	    "email": "odessafrank@vitricomp.com",
+	    "phone": "+1 (989) 421-2469",
+	    "address": "433 Sutter Avenue, Lodoga, Kentucky, 5411",
+	    "about": "Laboris minim non ad aute irure deserunt et fugiat exercitation ipsum in. Officia do labore irure laborum nulla dolore ex mollit nisi eu dolor culpa aliquip ut. Veniam reprehenderit amet occaecat ipsum labore laboris.\r\n",
+	    "registered": "2016-04-24T09:03:23 +06:00",
+	    "latitude": -70.639433,
+	    "longitude": -99.071144,
+	    "tags": [
+	      "qui",
+	      "cillum",
+	      "incididunt",
+	      "nisi",
+	      "in",
+	      "veniam",
+	      "est"
+	    ],
+	    "friends": [
+	      {
+	        "id": 0,
+	        "name": "Page Sanchez"
+	      },
+	      {
+	        "id": 1,
+	        "name": "Karin Hampton"
+	      },
+	      {
+	        "id": 2,
+	        "name": "Selena Head"
+	      }
+	    ],
+	    "greeting": "Hello, Odessa Frank! You have 10 unread messages.",
+	    "favoriteFruit": "banana"
+	  },
+	  {
+	    "_id": "5812d81964e0bd5428591e3f",
+	    "index": 3,
+	    "guid": "bafe853c-45b5-4068-bf94-12215f7ccd50",
+	    "isActive": true,
+	    "balance": "$1,842.52",
+	    "picture": "http://placehold.it/32x32",
+	    "age": 30,
+	    "eyeColor": "green",
+	    "name": "Kari Wagner",
+	    "gender": "female",
+	    "company": "SCENTRIC",
+	    "email": "kariwagner@scentric.com",
+	    "phone": "+1 (852) 477-2512",
+	    "address": "725 Etna Street, Troy, Pennsylvania, 4745",
+	    "about": "Cillum Lorem laborum reprehenderit enim. Ad occaecat cillum qui enim culpa sit ad incididunt tempor reprehenderit labore ex nostrud. Exercitation ut ullamco consectetur pariatur eiusmod quis consectetur adipisicing eu cupidatat cupidatat consectetur ad. Pariatur eiusmod voluptate cupidatat dolore ea. Qui id Lorem enim ipsum commodo laboris proident ipsum ea et labore veniam pariatur. Nulla et irure commodo sunt ea sit exercitation quis tempor elit Lorem in.\r\n",
+	    "registered": "2016-08-15T08:16:47 +06:00",
+	    "latitude": -7.488746,
+	    "longitude": 100.325422,
+	    "tags": [
+	      "fugiat",
+	      "cupidatat",
+	      "mollit",
+	      "amet",
+	      "in",
+	      "cupidatat",
+	      "veniam"
+	    ],
+	    "friends": [
+	      {
+	        "id": 0,
+	        "name": "Finch Morse"
+	      },
+	      {
+	        "id": 1,
+	        "name": "Wise Lindsey"
+	      },
+	      {
+	        "id": 2,
+	        "name": "Lelia Campbell"
+	      }
+	    ],
+	    "greeting": "Hello, Kari Wagner! You have 6 unread messages.",
+	    "favoriteFruit": "strawberry"
+	  },
+	  {
+	    "_id": "5812d81982213f5dca7ac63d",
+	    "index": 4,
+	    "guid": "3d28d861-c624-4f13-92dd-e30d1b03a5fd",
+	    "isActive": false,
+	    "balance": "$2,926.32",
+	    "picture": "http://placehold.it/32x32",
+	    "age": 22,
+	    "eyeColor": "brown",
+	    "name": "Calhoun Moore",
+	    "gender": "male",
+	    "company": "KROG",
+	    "email": "calhounmoore@krog.com",
+	    "phone": "+1 (990) 407-3843",
+	    "address": "282 Forrest Street, Lithium, Indiana, 3976",
+	    "about": "Enim irure nulla est adipisicing. Magna deserunt nostrud nostrud nulla. Eiusmod reprehenderit pariatur ex enim excepteur dolore Lorem labore laborum ullamco Lorem. Do voluptate irure eu duis ea cupidatat sint culpa eiusmod proident amet velit do veniam. Deserunt amet irure consectetur sit culpa esse Lorem cupidatat aliqua dolor quis quis mollit ut. Labore enim ut cillum irure sint exercitation occaecat exercitation voluptate.\r\n",
+	    "registered": "2015-03-24T05:31:13 +06:00",
+	    "latitude": -64.863695,
+	    "longitude": -111.577341,
+	    "tags": [
+	      "est",
+	      "nostrud",
+	      "labore",
+	      "laboris",
+	      "nostrud",
+	      "dolor",
+	      "ullamco"
+	    ],
+	    "friends": [
+	      {
+	        "id": 0,
+	        "name": "Cindy Mccarty"
+	      },
+	      {
+	        "id": 1,
+	        "name": "Robinson Parker"
+	      },
+	      {
+	        "id": 2,
+	        "name": "Cole Little"
+	      }
+	    ],
+	    "greeting": "Hello, Calhoun Moore! You have 9 unread messages.",
+	    "favoriteFruit": "apple"
+	  },
+	  {
+	    "_id": "5812d819902a4e1bc5dedbb5",
+	    "index": 5,
+	    "guid": "e834bf50-8642-4131-bba1-143e36b1b04f",
+	    "isActive": true,
+	    "balance": "$3,743.10",
+	    "picture": "http://placehold.it/32x32",
+	    "age": 38,
+	    "eyeColor": "blue",
+	    "name": "Angeline Marshall",
+	    "gender": "female",
+	    "company": "MIRACLIS",
+	    "email": "angelinemarshall@miraclis.com",
+	    "phone": "+1 (826) 491-2451",
+	    "address": "466 Onderdonk Avenue, Beechmont, Maryland, 4941",
+	    "about": "Pariatur deserunt pariatur reprehenderit adipisicing ipsum enim ullamco amet aute proident aliqua elit sint culpa. Dolore nostrud culpa ipsum sint reprehenderit excepteur adipisicing. Irure sit consectetur nulla occaecat officia. Tempor mollit qui non laborum commodo nisi culpa proident officia esse cillum sint culpa labore. Culpa irure eu amet aliquip fugiat ipsum laboris deserunt minim minim id enim commodo nostrud.\r\n",
+	    "registered": "2016-09-19T01:31:37 +06:00",
+	    "latitude": -67.075351,
+	    "longitude": -130.210991,
+	    "tags": [
+	      "laborum",
+	      "reprehenderit",
+	      "ipsum",
+	      "exercitation",
+	      "aliquip",
+	      "ex",
+	      "exercitation"
+	    ],
+	    "friends": [
+	      {
+	        "id": 0,
+	        "name": "Phelps Robertson"
+	      },
+	      {
+	        "id": 1,
+	        "name": "Suzanne Garrison"
+	      },
+	      {
+	        "id": 2,
+	        "name": "Higgins Hoover"
+	      }
+	    ],
+	    "greeting": "Hello, Angeline Marshall! You have 8 unread messages.",
+	    "favoriteFruit": "apple"
+	  },
+	  {
+	    "_id": "5812d819ba7a498f6a85f3fa",
+	    "index": 6,
+	    "guid": "6c1b85ab-6cdc-460a-977b-eade4fc7f653",
+	    "isActive": false,
+	    "balance": "$2,472.40",
+	    "picture": "http://placehold.it/32x32",
+	    "age": 34,
+	    "eyeColor": "blue",
+	    "name": "Alyssa Harmon",
+	    "gender": "female",
+	    "company": "INQUALA",
+	    "email": "alyssaharmon@inquala.com",
+	    "phone": "+1 (869) 580-2282",
+	    "address": "854 Evergreen Avenue, Loretto, Alabama, 9408",
+	    "about": "Aliqua quis officia sint est non eiusmod proident nisi consectetur ut. Labore laborum fugiat ut ullamco id. Reprehenderit deserunt aute nulla aliquip magna.\r\n",
+	    "registered": "2014-04-13T03:16:48 +06:00",
+	    "latitude": 7.388843,
+	    "longitude": 16.411384,
+	    "tags": [
+	      "veniam",
+	      "ullamco",
+	      "qui",
+	      "commodo",
+	      "et",
+	      "nulla",
+	      "irure"
+	    ],
+	    "friends": [
+	      {
+	        "id": 0,
+	        "name": "Collins Downs"
+	      },
+	      {
+	        "id": 1,
+	        "name": "Rowe Sherman"
+	      },
+	      {
+	        "id": 2,
+	        "name": "Helen Murphy"
+	      }
+	    ],
+	    "greeting": "Hello, Alyssa Harmon! You have 10 unread messages.",
+	    "favoriteFruit": "strawberry"
+	  }
+	]);
+</script>
