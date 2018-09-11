@@ -9,18 +9,18 @@ jsdoc = require('gulp-jsdoc3');
 
 gulp.task('merge', function(){
     return gulp.src(["../src/index.js", "../src/set.js", "../src/get.js", "../src/remove.js", "../src/setUncompressed.js", "../src/getUncompressed.js"])
-        .pipe(gp_concat('Jsldb.js'))
+        .pipe(gp_concat('jsldb.js'))
         .pipe(gulp.dest('../dist'))
 });
 
 gulp.task('doc', function(){
     var config = require('./config.json');
-    return gulp.src(["../dist/Jsldb.js"])
+    return gulp.src(["../dist/jsldb.js"])
         .pipe(jsdoc(config))
 });
 
 gulp.task('wrap', function() {
-    return gulp.src(["../dist/Jsldb.js"])
+    return gulp.src(["../dist/jsldb.js"])
     .pipe(umd({
         dependencies : function(file){ return ['jsoncomp', 'persist-js'] },
         templateName: 'amdNodeWeb'
